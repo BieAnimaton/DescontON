@@ -15,7 +15,8 @@
     "express": "^4.17.1",
     "mongoose": "^5.10.13",
     "morgan": "^1.10.0",
-    "require-dir": "^1.2.0"
+    "require-dir": "^1.2.0",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
