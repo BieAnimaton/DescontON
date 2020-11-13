@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const morgan = require('morgan');
 const requireDir = require('require-dir')
-require('dotenv/config');
 
 const app = express();
 
@@ -22,11 +21,9 @@ app.use(morgan("combined"))
 requireDir('./src/models');
 
 // MongoDB config
-const db_URL = require('./src/config/key');
-
 mongoose
     .connect(
-        db_URL.mongoURL, {
+        process.env.MONGO_URL, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         }
